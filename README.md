@@ -30,8 +30,8 @@ We used also nvidia nsight tool for memory profiling which helps more to see  cu
 ## Nvidia Nsight profiling for cuda mem calls and synchronization
 
 Use the `nsys profile` command to start profiling. Wrap your Python training script with `nsys profile` as follows:
-      ``` bash 
-      nsys profile -t cuda,nvtx python train_gpt2.py`.
+```bash
+nsys profile -t cuda,nvtx python train_gpt2.py
 
       
 `cuda` for CUDA API tracing and `nvtx` for NVIDIA Tools Extension (NVTX) API tracing, which provides additional annotations in the timeline. 
