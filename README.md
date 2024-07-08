@@ -28,15 +28,9 @@ The html file ['g0819.abci.local_Jun_19_20_16_36.html'] (/home/2023/rnouaj/llms-
 The json files are visualized  using ['chrome://tracing/'].
 We used also nvidia nsight tool for memory profiling which helps more to see  cuda execution and different function and system calls during forward backward optim step. The files are .qdrep, they are not in this repo because they are larger than 25MB. 
 ## Nvidia Nsight profiling for cuda mem calls and synchronization
+Use the `nsys profile` command to start profiling. Wrap your Python training script with `nsys profile` as follows:
 
-Use nsys profile command to start profiling. Wrap your Python training script with nsys profile as follows:
-
-(```bash
+```bash
 nsys profile -t cuda,nvtx python train_gpt2.py
-```)
 
--t cuda,nvtx: Specifies the profiling categories. cuda for CUDA API tracing and nvtx for NVIDIA Tools Extension (NVTX) API tracing, which provides additional annotations in the timeline.
-
-
-After the command completes, nsys will generate a report with a .qdrep file extension (e.g., report.qdrep). This file can be opened and analyzed using Nsight Systems GUI.
 
