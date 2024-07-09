@@ -22,7 +22,7 @@ We visualized the dependency using tensorboard SummaryWriter, the results are in
 
 ## Memory Profiling
 For memory profiling, we worked with pytorch profiler that generates tensorboard for complete analysis. 
-I followed this tutorial for complete memory profiling ['https://pytorch.org/blog/understanding-gpu-memory-1/]
+I followed this tutorial for complete memory profiling https://pytorch.org/blog/understanding-gpu-memory-1/
 The pickle file ['g0819.abci.local_Jun_19_20_03_26.pickle'](/home/2023/rnouaj/llms-inesc/gpt2-training/g0819.abci.local_Jun_19_20_03_26.pickle) is visualized using  https://pytorch.org/memory_viz, it is basically a memory snapshot.
 The html file ['g0819.abci.local_Jun_19_20_16_36.html'] (/home/2023/rnouaj/llms-inesc/gpt2-training/g0819.abci.local_Jun_19_20_16_36.html) is a timeline for memory usage. 
 The json files are visualized  using ['chrome://tracing/'].
