@@ -23,7 +23,12 @@ We visualized the dependency using tensorboard SummaryWriter, the results are in
 ## Memory Profiling
 For memory profiling, we worked with pytorch profiler that generates tensorboard for complete analysis. 
 >Using the following memory profiling has a lot of dependency errors so watch out of the following;
->When installing Transformers, there will be cargo/rust error, they need to be installed via 'curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh' and then  '  pip3 install transformers' . you may need to upgrade your pip.
+>When installing Transformers, there will be cargo/rust error, they need to be installed via 
+>```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh' 
+pip3 install transformers
+#you may need to upgrade pip
+``` 
 >There is also the errors for export_memory_timeline, it worked for me with torch version 2.3.0+cu121 but not with 1.10.0
 
 I followed this tutorial for complete memory profiling https://pytorch.org/blog/understanding-gpu-memory-1/
